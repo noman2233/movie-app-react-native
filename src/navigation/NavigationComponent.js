@@ -1,5 +1,6 @@
 import AccountSettings from '../screens/accountSettings/AccountSettings';
 import Contact from '../screens/contact/Contact';
+import ContactForm from '../screens/contact/ContactForm';
 import Home from '../screens/home/Home';
 import MovieDetail from '../screens/movieDetail/MovieDetail';
 import PrivacyPolicy from '../screens/privacyPolicy/PrivacyPolicy';
@@ -11,7 +12,7 @@ export const screens = [
     component: Home,
     title: 'Home',
     headerAlign: 'center',
-    // headers: true,
+    headers: false,
   },
   {
     id: '2',
@@ -38,10 +39,18 @@ export const screens = [
     headers: true,
   },
   {
-    id: '4',
+    id: '5',
     name: 'Contact',
     component: Contact,
-    title: 'Contact Us',
+    title: 'Useful Links',
+    headerAlign: 'center',
+    headers: true,
+  },
+  {
+    id: '6',
+    name: 'ContactForm',
+    component: ContactForm,
+    title: 'Contact us',
     headerAlign: 'center',
     headers: true,
   },

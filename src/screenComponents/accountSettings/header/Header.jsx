@@ -16,8 +16,13 @@ const Header = () => {
         <Image source={Notification} style={styles.notifi_image} />
       </View>
       <View style={styles.profile_user}>
-        <Image source={{uri: person}} style={styles.image} />
-        <Text style={styles.name}>Ayesha Khan</Text>
+        <Image
+          source={{
+            uri: 'https://e1.pxfuel.com/desktop-wallpaper/49/663/desktop-wallpaper-new-movie-posters-hollywood-movie-2022-thumbnail.jpg',
+          }}
+          style={styles.image}
+        />
+        <Text style={styles.name}>Usman Khan</Text>
       </View>
     </View>
   );
@@ -26,8 +31,7 @@ const Header = () => {
 export default Header;
 
 const styles = StyleSheet.create({
-  container: {
-  },
+  container: {},
   wrapper: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -43,10 +47,10 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   image: {
-    width: responsiveWidth(16),
-    height: responsiveHeight(8),
-    resizeMode: 'contain',
-    borderRadius: SIZES.radius * 5,
+    width: responsiveWidth(14),
+    height: responsiveHeight(7),
+    resizeMode: 'cover',
+    borderRadius: responsiveWidth(20),
   },
   profile_user: {
     flexDirection: 'row',

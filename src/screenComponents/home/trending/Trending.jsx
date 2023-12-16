@@ -1,15 +1,15 @@
 import {FlatList, Image, StyleSheet, Text, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {
+  responsiveFontSize,
   responsiveHeight,
   responsiveWidth,
 } from 'react-native-responsive-dimensions';
 import {COLORS, FONTS, SIZES} from '../../../../constants/theme';
 import axios from 'axios';
-import { data, data_1 } from '../../../../constants/dummy';
+import {data, data_1} from '../../../../constants/dummy';
 
 const Trending = ({heading}) => {
-
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>{heading}</Text>
@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
     color: COLORS.dark,
     ...FONTS.h5,
     paddingVertical: SIZES.margin,
+    fontSize: responsiveFontSize(2),
   },
   image: {
     width: 170,

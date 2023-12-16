@@ -56,12 +56,12 @@ const styles = StyleSheet.create({
     color: COLORS.dark,
     ...FONTS.h5,
     paddingVertical: SIZES.margin,
-    fontSize: responsiveFontSize(1.8),
+    fontSize: responsiveFontSize(2),
   },
   image: {
     width: 170,
     height: 220,
-    borderRadius: responsiveWidth(1.5),
+    borderRadius: SIZES.radius,
     resizeMode: 'cover',
   },
   separator: {

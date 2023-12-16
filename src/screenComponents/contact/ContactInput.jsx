@@ -1,7 +1,7 @@
 import {StyleSheet, Text, TextInput, View} from 'react-native';
 import React from 'react';
-import {COLORS, FONTS, SIZES} from '../../../constants/theme';
 import {responsiveHeight} from 'react-native-responsive-dimensions';
+import {COLORS, SIZES, FONTS} from '../../../constants/theme';
 const ContactInput = ({
   keyboardType,
   multiline,

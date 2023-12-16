@@ -39,7 +39,7 @@ const MovieDetail = () => {
 
   const options = {
     url: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    message: 'Movie booking app',
+    message: 'Hotel booking app',
   };
   const shareModal = () => {
     Share.open(options)

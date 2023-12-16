@@ -7,6 +7,8 @@ import {
 } from 'react-native-responsive-dimensions';
 import axios from 'axios';
 import {COLORS, FONTS, SIZES} from '../../../../constants/theme';
+import IconButtons from '../../../components/IconButtons';
+import {download, play} from '../../../../constants/constants';
 const Slider = () => {
   const [movie, setMovie] = useState([]);
   useEffect(() => {
@@ -36,11 +38,33 @@ const Slider = () => {
                 <Text style={styles.heading}>{item.title}</Text>
                 <Text style={styles.text}>{item?.overview?.slice(0, 100)}</Text>
               </View>
-            </ImageBackground>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  alignSelf: 'center',
+                  marginTop: responsiveHeight(20),
+                  gap: SIZES.padding_small,
+                }}>
+                <IconButtons label="Download" source={download} />
 
-            <Text style={styles.rating}>
+                <IconButtons
+                  label="Play"
+                  source={play}
+                  contentContainerStyle={{
+                    backgroundColor: COLORS.light,
+                    borderColor: COLORS.primary,
+                    borderWidth: 1,
+                  }}
+                  labelStyle={{
+                    color: COLORS.primary,
+                  }}
+                />
+              </View>
+            </ImageBackground>
+            {/* <Text style={styles.rating}>
               Rating - {item?.vote_average?.toFixed(1)}{' '}
-            </Text>
+            </Text> */}
           </View>
         );
       }}
@@ -75,7 +99,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: SIZES.padding_small,
     textAlign: 'center',
     paddingTop: responsiveHeight(2),
-    lineHeight: SIZES.margin*1.8,
+    lineHeight: SIZES.margin * 1.8,
   },
   wrapper: {
     flexDirection: 'column',

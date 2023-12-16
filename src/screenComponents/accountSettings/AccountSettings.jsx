@@ -44,9 +44,14 @@ const AccountSettings = () => {
         />
         <ButtonComponent label="Notification" image={Notification} />
         <ButtonComponent
-          label="Contact Us"
+          label="Useful Links"
           image={contact}
           onPress={() => navigation.navigate('Contact')}
+        />
+        <ButtonComponent
+          label="Contact Us"
+          image={contact}
+          onPress={() => navigation.navigate('ContactForm')}
         />
         <ButtonComponent
           label="Privecy Policy"

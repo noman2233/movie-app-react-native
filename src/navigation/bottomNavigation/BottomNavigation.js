@@ -42,7 +42,7 @@ const BottomNavigation = () => {
         name="Home"
         component={Home}
         options={{
-          headerShown: true,
+          headerShown: false,
           tabBarIcon: ({focused, color, size}) => (
             <Image
               source={focused ? home_red : home_grey}
@@ -55,7 +55,7 @@ const BottomNavigation = () => {
         name="Movie Detail"
         component={MovieDetail}
         options={{
-          headerShown: true,
+          headerShown: false,
           tabBarIcon: ({focused, color, size}) => (
             <Image
               source={focused ? explore_red : explore_grey}

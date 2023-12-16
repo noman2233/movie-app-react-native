@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     color: COLORS.dark,
     ...FONTS.h5,
     fontSize: responsiveFontSize(1.9),
-    fontFamily: 'Quicksand-Medium',
+    fontFamily: 'Poppins-Regular',
     textTransform: 'capitalize',
   },
   image: {
