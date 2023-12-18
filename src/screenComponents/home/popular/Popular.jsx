@@ -69,5 +69,6 @@ const styles = StyleSheet.create({
   },
   container: {
     marginLeft: responsiveWidth(1),
+    marginRight: responsiveWidth(2),
   },
 });

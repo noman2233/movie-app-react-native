@@ -13,7 +13,7 @@ const Welcome = ({navigation}) => {
   useEffect(() => {
     setTimeout(() => {
       navigation.navigate('Parent');
-    }, 2000);
+    }, 100);
   });
 
   return (

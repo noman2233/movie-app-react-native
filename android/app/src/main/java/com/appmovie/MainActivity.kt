@@ -3,9 +3,15 @@ package com.appmovie
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.fabricEnabled
-import com.facebook.react.defaults.DefaultReactActivityDelegate
+import com.facebook.react.defaults.DefaultReactActivityDelegate 
+import org.devio.rn.splashscreen.SplashScreen; 
 
 class MainActivity : ReactActivity() {
+ @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    SplashScreen.show(this, R.style.SplashScreenTheme,true);
+    super.onCreate(savedInstanceState);
+  }
 
   /**
    * Returns the name of the main component registered from JavaScript. This is used to schedule

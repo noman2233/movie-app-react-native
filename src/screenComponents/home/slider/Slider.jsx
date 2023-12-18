@@ -34,37 +34,48 @@ const Slider = () => {
         return (
           <View style={styles.container}>
             <ImageBackground source={{uri: image}} style={styles.image}>
-              <View style={styles.wrapper}>
-                <Text style={styles.heading}>{item.title}</Text>
-                <Text style={styles.text}>{item?.overview?.slice(0, 100)}</Text>
-              </View>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  alignSelf: 'center',
-                  marginTop: responsiveHeight(20),
-                  gap: SIZES.padding_small,
-                }}>
-                <IconButtons label="Download" source={download} />
-
-                <IconButtons
-                  label="Play"
-                  source={play}
-                  contentContainerStyle={{
-                    backgroundColor: COLORS.light,
-                    borderColor: COLORS.primary,
-                    borderWidth: 1,
-                  }}
-                  labelStyle={{
-                    color: COLORS.primary,
-                  }}
-                />
+              <View style={styles.mini_wrapper}>
+                <View style={styles.wrapper}>
+                  <Text style={styles.heading}>{item.title}</Text>
+                  <Text style={styles.text}>
+                    {item?.overview?.slice(0, 30)}......
+                  </Text>
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      gap: SIZES.padding_small,
+                      marginTop: SIZES.margin,
+                    }}>
+                    <IconButtons
+                      label="Download"
+                      source={download}
+                      contentContainerStyle={{
+                        width: responsiveWidth(30),
+                      }}
+                      labelStyle={{
+                        fontSize: responsiveFontSize(1.5),
+                        fontFamily: 'Poppins-Bold',
+                      }}
+                    />
+                    <IconButtons
+                      label="Play"
+                      source={play}
+                      contentContainerStyle={{
+                        backgroundColor: COLORS.light,
+                        borderColor: COLORS.primary,
+                        borderWidth: 1,
+                        width: responsiveWidth(30),
+                      }}
+                      labelStyle={{
+                        color: COLORS.primary,
+                        fontSize: responsiveFontSize(1.5),
+                        fontFamily: 'Poppins-Bold',
+                      }}
+                    />
+                  </View>
+                </View>
               </View>
             </ImageBackground>
-            {/* <Text style={styles.rating}>
-              Rating - {item?.vote_average?.toFixed(1)}{' '}
-            </Text> */}
           </View>
         );
       }}
@@ -81,13 +92,12 @@ const styles = StyleSheet.create({
     height: responsiveHeight(40),
   },
   image: {
-    width: '100%',
+    width: responsiveWidth(100),
     height: '100%',
     resizeMode: 'cover',
     flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    position: 'relative',
+    // position: 'relative',
+    paddingLeft: SIZES.marginLarge,
   },
   heading: {
     color: COLORS.light,
@@ -96,34 +106,20 @@ const styles = StyleSheet.create({
   text: {
     color: COLORS.light,
     ...FONTS.body2,
-    paddingHorizontal: SIZES.padding_small,
-    textAlign: 'center',
-    paddingTop: responsiveHeight(2),
+    paddingTop: responsiveHeight(1),
     lineHeight: SIZES.margin * 1.8,
   },
   wrapper: {
     flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    position: 'absolute',
-    bottom: responsiveHeight(5),
-    backgroundColor: COLORS.dark60,
+    alignSelf: 'flex-start',
     width: '100%',
     height: '100%',
+    top: responsiveHeight(15),
+    paddingLeft: SIZES.margin,
   },
-  rating: {
-    backgroundColor: COLORS.primary,
-    paddingHorizontal: SIZES.marginLarge,
-    paddingVertical: responsiveHeight(0.5),
-    color: COLORS.light,
-    ...FONTS.h5,
-    fontSize: responsiveFontSize(1.6),
-    position: 'absolute',
-    bottom: 0,
-    zIndex: 999,
-    textAlign: 'center',
-    width: responsiveWidth(35),
-    alignSelf: 'center',
-    borderRadius: responsiveWidth(1),
+  mini_wrapper: {
+    backgroundColor: COLORS.dark60,
+    width: responsiveWidth(100),
+    height: responsiveHeight(40),
   },
 });

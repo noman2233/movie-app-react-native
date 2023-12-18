@@ -9,11 +9,14 @@ import {
   booking,
   contact,
   favourite,
+  fingerprint,
+  fingerprint_2,
 } from '../../../constants/constants';
 import {responsiveWidth} from 'react-native-responsive-dimensions';
 import Header from './header/Header';
 import {useNavigation} from '@react-navigation/native';
 import {COLORS, SIZES, FONTS} from '../../../constants/theme';
+import ProfileForm from '../../screens/profile/ProfileForm';
 
 const AccountSettings = () => {
   const navigation = useNavigation();
@@ -28,9 +31,19 @@ const AccountSettings = () => {
           onPress={() => navigation.navigate('User Profile Form')}
         />
         <ButtonComponent
-          label="Login & Security "
+          label="Login & Security"
           image={Login}
           onPress={() => navigation.navigate('Login')}
+        />
+        <ButtonComponent
+          label="ProfileForm"
+          image={Login}
+          onPress={() => navigation.navigate('Profile Form')}
+        />
+        <ButtonComponent
+          label="FingerPrint"
+          image={fingerprint_2}
+          onPress={() => navigation.navigate('FingerPrint')}
         />
         <ButtonComponent
           label="Favourite"

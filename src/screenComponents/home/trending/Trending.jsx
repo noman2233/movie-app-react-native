@@ -46,13 +46,14 @@ const styles = StyleSheet.create({
   image: {
     width: 170,
     height: 220,
-    borderRadius: responsiveWidth(1.5),
+    borderRadius: SIZES.radius,
     resizeMode: 'cover',
   },
   separator: {
     width: responsiveWidth(2),
   },
   container: {
-    marginLeft: responsiveWidth(1),
+    marginLeft: responsiveWidth(2),
+    marginRight: responsiveWidth(2),
   },
 });

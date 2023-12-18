@@ -46,6 +46,12 @@ export const analyze = require('../assets/images/settings/icons8-analyze-48.png'
 export const contact = require('../assets/images/settings/icons8-contact-50.png');
 export const favourite = require('../assets/images/settings/favourite.png');
 export const booking = require('../assets/images/settings/booking.png');
+export const auth_person = require('../assets/images/auth/auth1.jpeg');
+export const loader = require('../assets/images/auth/loader.png');
+export const main_forgot = require('../assets/images/auth/main_forgot.png');
+export const google_logo = require('../assets/images/google_logo.png');
+export const fingerprint = require('../assets/images/auth/images.png');
+export const fingerprint_2 = require('../assets/images/auth/images.png');
 
 
 

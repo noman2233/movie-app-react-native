@@ -8,12 +8,22 @@ import {
 } from 'react-native-responsive-dimensions';
 import {activeOpacity} from '../../constants/constants';
 
-const SimpleButton = ({label, onPress}) => {
+const SimpleButton = ({label, onPress, containerStyle}) => {
   return (
     <TouchableOpacity
       onPress={onPress}
       activeOpacity={activeOpacity}
-      style={styles.button}>
+      style={{
+        width: responsiveWidth(92),
+        textAlign: 'center',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: SIZES.padding_small,
+        backgroundColor: COLORS.primary,
+        borderRadius: SIZES.radius * 5,
+        ...containerStyle,
+      }}>
       <Text style={styles.text}>{label}</Text>
     </TouchableOpacity>
   );
