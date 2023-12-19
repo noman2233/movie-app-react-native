@@ -18,12 +18,23 @@ import {data, data_1} from '../../../../constants/dummy';
 import {useNavigation} from '@react-navigation/native';
 import {activeOpacity} from '../../../../constants/constants';
 
-const Popular = ({heading}) => {
+const Popular = ({heading, seeMore}) => {
   const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
-      <Text style={styles.heading}>{heading}</Text>
+      <View
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}>
+        <Text style={styles.heading}>{heading}</Text>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('All Movies Trending this week')}>
+          <Text style={styles.seemore}>{seeMore}</Text>
+        </TouchableOpacity>
+      </View>
       <FlatList
         data={data}
         horizontal={true}
@@ -32,16 +43,16 @@ const Popular = ({heading}) => {
         keyExtractor={(item, index) => index.toString()}
         renderItem={({item, index}) => {
           return (
-            <TouchableOpacity
-              activeOpacity={activeOpacity}
-              onPress={() => navigation.navigate('Movie Detail')}>
-              <Image
-                source={{
-                  uri: item.image,
-                }}
-                style={styles.image}
-              />
-            </TouchableOpacity>
+            // <TouchableOpacity
+            //   activeOpacity={activeOpacity}
+            //   onPress={() => navigation.navigate('Movie Detail')}>
+            <Image
+              source={{
+                uri: item.image,
+              }}
+              style={styles.image}
+            />
+            // </TouchableOpacity>
           );
         }}
       />
@@ -70,5 +81,10 @@ const styles = StyleSheet.create({
   container: {
     marginLeft: responsiveWidth(1),
     marginRight: responsiveWidth(2),
+  },
+  seemore: {
+    color: COLORS.primary,
+    ...FONTS.body3,
+    fontSize: responsiveFontSize(1.5),
   },
 });

@@ -8,16 +8,17 @@ import Login from './src/screens/authentication/Login';
 import SignUp from './src/screens/authentication/SignUp';
 import OTP from './src/screens/authentication/OTP';
 import FingerPrint from './src/screens/authentication/FingerPrint';
+import TopMoviesThisWeek from './src/screens/topMoviesThisWeek/TopMoviesThisWeek';
+import NewRelease from './src/screens/newRelease/NewRelease';
 
 const App = () => {
   useEffect(() => {
     // SplashScreen.hide();
   }, []);
 
-
+  // return <TopMoviesThisWeek />;
+  // return <NewRelease />;
   return <AppNavigator />;
- 
-  
 };
 
 export default App;

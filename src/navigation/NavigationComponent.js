@@ -10,6 +10,9 @@ import MovieDetail from '../screens/movieDetail/MovieDetail';
 import PrivacyPolicy from '../screens/privacyPolicy/PrivacyPolicy';
 import ProfileForm from '../screens/profile/ProfileForm';
 import FingerPrint from '../screens/authentication/FingerPrint';
+import TopMoviesThisWeek from '../screens/topMoviesThisWeek/TopMoviesThisWeek';
+import NewRelease from '../screens/newRelease/NewRelease';
+import TopMoviesThisWeekTresnding from '../screens/newRelease/TopMoviesThisWeek';
 
 export const screens = [
   {
@@ -106,6 +109,30 @@ export const screens = [
     name: 'FingerPrint',
     component: FingerPrint,
     title: 'FingerPrint',
+    headerAlign: 'center',
+    headers: true,
+  },
+  {
+    id: '11',
+    name: 'Top Movies This Week',
+    component: TopMoviesThisWeek,
+    title: 'Top Movies This Week', 
+    headerAlign: 'center',
+    headers: true,
+  },
+  {
+    id: '11',
+    name: 'New Release',
+    component: NewRelease,
+    title: 'New Release', 
+    headerAlign: 'center',
+    headers: true,
+  },
+  {
+    id: '11',
+    name: 'All Movies Trending this week',
+    component: TopMoviesThisWeekTresnding,
+    title: 'Top Movie Trednding This Week ', 
     headerAlign: 'center',
     headers: true,
   },

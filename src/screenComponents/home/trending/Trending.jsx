@@ -1,4 +1,11 @@
-import {FlatList, Image, StyleSheet, Text, View} from 'react-native';
+import {
+  FlatList,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {
   responsiveFontSize,
@@ -8,11 +15,23 @@ import {
 import {COLORS, FONTS, SIZES} from '../../../../constants/theme';
 import axios from 'axios';
 import {data, data_1} from '../../../../constants/dummy';
+import {useNavigation} from '@react-navigation/native';
 
-const Trending = ({heading}) => {
+const Trending = ({heading, seeMore}) => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <Text style={styles.heading}>{heading}</Text>
+      <View
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}>
+        <Text style={styles.heading}>{heading}</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('New Release')}>
+          <Text style={styles.seemore}>{seeMore}</Text>
+        </TouchableOpacity>
+      </View>
       <FlatList
         data={data_1}
         horizontal={true}
@@ -55,5 +74,10 @@ const styles = StyleSheet.create({
   container: {
     marginLeft: responsiveWidth(2),
     marginRight: responsiveWidth(2),
+  },
+  seemore: {
+    color: COLORS.primary,
+    ...FONTS.body3,
+    fontSize: responsiveFontSize(1.5),
   },
 });
