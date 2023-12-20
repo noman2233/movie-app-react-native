@@ -16,6 +16,7 @@ import {COLORS, FONTS, SIZES} from '../../../../constants/theme';
 import axios from 'axios';
 import {data, data_1} from '../../../../constants/dummy';
 import {useNavigation} from '@react-navigation/native';
+import {activeOpacity} from '../../../../constants/constants';
 
 const Trending = ({heading, seeMore}) => {
   const navigation = useNavigation();
@@ -40,12 +41,16 @@ const Trending = ({heading, seeMore}) => {
         keyExtractor={(item, index) => index.toString()}
         renderItem={({item, index}) => {
           return (
-            <Image
-              source={{
-                uri: item.image,
-              }}
-              style={styles.image}
-            />
+            <TouchableOpacity
+              activeOpacity={activeOpacity}
+              onPress={() => navigation.navigate('Movie Detail')}>
+              <Image
+                source={{
+                  uri: item.image,
+                }}
+                style={styles.image}
+              />
+            </TouchableOpacity>
           );
         }}
       />

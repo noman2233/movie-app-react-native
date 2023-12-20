@@ -26,11 +26,13 @@ import {
 import Cast from '../../screenComponents/movieDetail/cast/Cast';
 import IconButtons from '../../components/IconButtons';
 import {SIZES, COLORS, FONTS} from '../../../constants/theme';
-import MoreLikeThis from '../../screenComponents/movieDetail/moreLikeThis/MoreLikeThis';
 import Share from 'react-native-share';
 
+import MoreLikeThis from '../../screenComponents/movieDetail/moreLikeThis/MoreLikeThis';
 import Comments from '../../screenComponents/movieDetail/comments/Comments';
 import Trailors from '../../screenComponents/movieDetail/trailors/Trailors';
+import DownloadModal from '../../modals/download/Download';
+import RatingModal from '../../modals/rating/RatingModal';
 const MovieDetail = () => {
   const [toggle, setToggle] = useState(1);
   const toggleTabs = index => {
@@ -50,7 +52,8 @@ const MovieDetail = () => {
         err && console.log(err);
       });
   };
-
+  const [open, setOpen] = useState(false);
+  const [ratingModal, setRatingModal] = useState(false);
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.container}>
@@ -71,7 +74,12 @@ const MovieDetail = () => {
             </TouchableOpacity>
           </View>
           <View style={styles.rating_box}>
-            <Image source={star} style={styles.icon} />
+            <TouchableOpacity
+              activeOpacity={activeOpacity}
+              onPress={() => setRatingModal(true)}>
+              <Image source={star} style={styles.icon} />
+            </TouchableOpacity>
+            {ratingModal && <RatingModal setRatingModal={setRatingModal} />}
             <Text style={styles.rating}>9.8</Text>
             <Image source={more} style={styles.icon} />
             <Image source={greater} style={styles.greater} />
@@ -87,7 +95,13 @@ const MovieDetail = () => {
               justifyContent: 'space-between',
               marginTop: SIZES.margin,
             }}>
-            <IconButtons label="Download" source={download} />
+            <IconButtons
+              label="Download"
+              source={download}
+              onPress={() => setOpen(true)}
+            />
+
+            {open && <DownloadModal setOpen={setOpen} />}
             <IconButtons
               label="Play"
               source={play}
@@ -190,14 +204,12 @@ const styles = StyleSheet.create({
   rating_box: {
     flexDirection: 'row',
     alignItems: 'center',
-    // justifyContent: 'spa',
     alignSelf: 'flex-start',
     gap: SIZES.margin,
   },
   rating: {
     color: COLORS.primary,
     ...FONTS.body1,
-    // paddingLeft: SIZES.margin,
   },
   country: {
     color: COLORS.primary,

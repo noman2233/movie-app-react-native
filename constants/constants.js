@@ -11,9 +11,11 @@ export const bookmark = require('../assets/images/icons/icons8-bookmark-50.png')
 export const send = require('../assets/images/icons/icons8-send-48.png');
 export const more = require('../assets/images/icons/more.png');
 export const star = require('../assets/images/icons/icons8-star-24.png');
+export const star_outline = require('../assets/images/icons/icons8-star-26.png');
 export const download = require('../assets/images/icons/download.png');
 export const play = require('../assets/images/icons/icons8-play-30.png');
 export const heart = require('../assets/images/icons/icons8-heart-30.png');
+export const not_found = require('../assets/images/not_found.png');
 
 // ************** bottom navigation icon images ************************
 
@@ -27,15 +29,6 @@ export const explore_grey = require('../assets/images/bottomNavigation/icons8-ex
 export const explore_red = require('../assets/images/bottomNavigation/explore_red.png');
 export const home_red = require('../assets/images/bottomNavigation/home_red.png');
 export const home_grey = require('../assets/images/bottomNavigation/icons8-home-32.png');
-
-
-
-
-
-
-
-
-
 
 // ******************* account icons ********************************
 
@@ -52,7 +45,3 @@ export const main_forgot = require('../assets/images/auth/main_forgot.png');
 export const google_logo = require('../assets/images/google_logo.png');
 export const fingerprint = require('../assets/images/auth/images.png');
 export const fingerprint_2 = require('../assets/images/auth/images.png');
-
-
-
-

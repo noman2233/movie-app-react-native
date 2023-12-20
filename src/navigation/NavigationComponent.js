@@ -13,6 +13,9 @@ import FingerPrint from '../screens/authentication/FingerPrint';
 import TopMoviesThisWeek from '../screens/topMoviesThisWeek/TopMoviesThisWeek';
 import NewRelease from '../screens/newRelease/NewRelease';
 import TopMoviesThisWeekTresnding from '../screens/newRelease/TopMoviesThisWeek';
+import AllComments from '../screens/allComments/AllComments';
+import Comments from '../screens/allComments/Comments';
+import NotFound from '../screens/notFound/NotFound';
 
 export const screens = [
   {
@@ -134,6 +137,30 @@ export const screens = [
     component: TopMoviesThisWeekTresnding,
     title: 'Top Movie Trednding This Week ', 
     headerAlign: 'center',
+    headers: true,
+  },
+  {
+    id: '11',
+    name: 'All Comments',
+    component: AllComments,
+    title: 'All Comments', 
+    headerAlign: 'start',
+    headers: true,
+  },
+  {
+    id: '122',
+    name: 'Comments',
+    component: Comments,
+    title: 'Comments', 
+    headerAlign: 'start',
+    headers: true,
+  },
+  {
+    id: '122',
+    name: 'NotFound',
+    component: NotFound,
+    title: 'NotFound', 
+    headerAlign: 'start',
     headers: true,
   },
 ];

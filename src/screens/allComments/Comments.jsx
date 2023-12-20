@@ -5,18 +5,16 @@ import {
   responsiveHeight,
   responsiveWidth,
 } from 'react-native-responsive-dimensions';
-import {COLORS, SIZES, FONTS} from '../../../../constants/theme';
-import {heart} from '../../../../constants/constants';
-import SimpleButton from '../../../components/SimpleButton';
-import {useNavigation} from '@react-navigation/native';
+import {heart} from '../../../constants/constants';
+import {COLORS, SIZES, FONTS} from '../../../constants/theme';
 
-const Comments = ({toggle}) => {
-  const navigation = useNavigation();
+const Comments = () => {
   return (
-    <View style={toggle === 3 ? styles.active : styles.non_active}>
+    <View>
       <FlatList
-        data={[1, 1, 1, 1, 1]}
+        data={[1, 1, 1, 1, 1, 1, 1, 1]}
         keyExtractor={(item, index) => index.toString()}
+        showsVerticalScrollIndicator={false}
         renderItem={({item, index}) => {
           return (
             <View style={styles.container}>
@@ -39,28 +37,10 @@ const Comments = ({toggle}) => {
               <View style={styles.reply_box}>
                 <Image source={heart} style={styles.heart} />
                 <Text style={styles.likes}>230</Text>
-                {/* <Text style={styles.reply}>reply</Text> */}
               </View>
             </View>
           );
         }}
-        ListFooterComponent={
-          <>
-            <SimpleButton
-              label="Show All Comments"
-              containerStyle={{
-                backgroundColor: COLORS.light,
-                borderWidth: 2,
-                borderRadius: SIZES.radius,
-                marginVertical: SIZES.margin,
-              }}
-              labelStyle={{
-                color: COLORS.dark,
-              }}
-              onPress={() => navigation.navigate('All Comments')}
-            />
-          </>
-        }
       />
     </View>
   );

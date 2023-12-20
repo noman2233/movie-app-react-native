@@ -10,6 +10,10 @@ import OTP from './src/screens/authentication/OTP';
 import FingerPrint from './src/screens/authentication/FingerPrint';
 import TopMoviesThisWeek from './src/screens/topMoviesThisWeek/TopMoviesThisWeek';
 import NewRelease from './src/screens/newRelease/NewRelease';
+import DownloadModal from './src/modals/download/Download';
+import MovieDetail from './src/screens/movieDetail/MovieDetail';
+import RatingModal from './src/modals/rating/RatingModal';
+import NotFound from './src/screens/notFound/NotFound';
 
 const App = () => {
   useEffect(() => {
@@ -18,7 +22,11 @@ const App = () => {
 
   // return <TopMoviesThisWeek />;
   // return <NewRelease />;
-  return <AppNavigator />;
+  // return <DownloadModal/>;
+  return <AppNavigator />
+  // return <MovieDetail />;
+  // return <RatingModal />;
+  // return <NotFound />;
 };
 
 export default App;

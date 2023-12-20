@@ -43,16 +43,16 @@ const Popular = ({heading, seeMore}) => {
         keyExtractor={(item, index) => index.toString()}
         renderItem={({item, index}) => {
           return (
-            // <TouchableOpacity
-            //   activeOpacity={activeOpacity}
-            //   onPress={() => navigation.navigate('Movie Detail')}>
-            <Image
-              source={{
-                uri: item.image,
-              }}
-              style={styles.image}
-            />
-            // </TouchableOpacity>
+            <TouchableOpacity
+              activeOpacity={activeOpacity}
+              onPress={() => navigation.navigate('Movie Detail')}>
+              <Image
+                source={{
+                  uri: item.image,
+                }}
+                style={styles.image}
+              />
+            </TouchableOpacity>
           );
         }}
       />

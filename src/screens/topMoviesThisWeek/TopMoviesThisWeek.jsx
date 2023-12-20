@@ -29,7 +29,10 @@ const TopMoviesThisWeek = ({heading, data}) => {
         keyExtractor={(item, index) => index.toString()}
         renderItem={({item, index}) => {
           return (
-            <View style={styles.wrapper}>
+            <TouchableOpacity
+              activeOpacity={activeOpacity}
+              onPress={() => navigation.navigate('Movie Detail')}
+              style={styles.wrapper}>
               <Image
                 source={{
                   uri: item.image,
@@ -37,7 +40,7 @@ const TopMoviesThisWeek = ({heading, data}) => {
                 style={styles.image}
               />
               <Text style={styles.rating}>4.3</Text>
-            </View>
+            </TouchableOpacity>
           );
         }}
       />

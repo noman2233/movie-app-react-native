@@ -8,6 +8,7 @@ import {
 export const COLORS = {
   // Error
   error: 'rgba(246, 86, 93, 1)',
+  error80: '#ff7886',
 
   // Primary
   primary: '#e21221',

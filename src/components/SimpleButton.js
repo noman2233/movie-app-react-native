@@ -8,7 +8,7 @@ import {
 } from 'react-native-responsive-dimensions';
 import {activeOpacity} from '../../constants/constants';
 
-const SimpleButton = ({label, onPress, containerStyle}) => {
+const SimpleButton = ({label, labelStyle, onPress, containerStyle}) => {
   return (
     <TouchableOpacity
       onPress={onPress}
@@ -24,7 +24,7 @@ const SimpleButton = ({label, onPress, containerStyle}) => {
         borderRadius: SIZES.radius * 5,
         ...containerStyle,
       }}>
-      <Text style={styles.text}>{label}</Text>
+      <Text style={[styles.text, {...labelStyle}]}>{label}</Text>
     </TouchableOpacity>
   );
 };
