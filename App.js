@@ -14,6 +14,9 @@ import DownloadModal from './src/modals/download/Download';
 import MovieDetail from './src/screens/movieDetail/MovieDetail';
 import RatingModal from './src/modals/rating/RatingModal';
 import NotFound from './src/screens/notFound/NotFound';
+import DeveloperInfo from './src/screens/developerInfo/DeveloperInfo';
+import Download from './src/screens/download/Download';
+import Search from './src/screenComponents/search/Search';
 
 const App = () => {
   useEffect(() => {
@@ -23,10 +26,14 @@ const App = () => {
   // return <TopMoviesThisWeek />;
   // return <NewRelease />;
   // return <DownloadModal/>;
-  return <AppNavigator />
+  return <AppNavigator />;
   // return <MovieDetail />;
   // return <RatingModal />;
   // return <NotFound />;
+  // return <DeveloperInfo/>;
+  // return <Download />;
+  // return <Search />;
+  // return <Download />;
 };
 
 export default App;

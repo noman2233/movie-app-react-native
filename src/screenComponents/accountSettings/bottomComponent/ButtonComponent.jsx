@@ -7,7 +7,7 @@ import {
   responsiveHeight,
   responsiveWidth,
 } from 'react-native-responsive-dimensions';
-import {activeOpacity} from '../../../../constants/constants';
+import {activeOpacity, grater_than} from '../../../../constants/constants';
 
 const ButtonComponent = ({image, label, onPress}) => {
   return (
@@ -19,11 +19,8 @@ const ButtonComponent = ({image, label, onPress}) => {
         <Image source={image} style={styles.image} />
         <Text style={styles.text}>{label}</Text>
       </View>
-      <Icon
-        name="greater-than"
-        color={COLORS.dark}
-        size={responsiveHeight(1.7)}
-      />
+
+      <Image source={grater_than} style={styles.image_greater} />
     </TouchableOpacity>
   );
 };
@@ -57,5 +54,10 @@ const styles = StyleSheet.create({
     height: responsiveHeight(6),
     marginRight: SIZES.margin,
     resizeMode: 'contain',
+  },
+  image_greater: {
+    width: responsiveWidth(20),
+    height: responsiveHeight(10),
+    resizeMode: 'cover',
   },
 });

@@ -16,6 +16,7 @@ import TopMoviesThisWeekTresnding from '../screens/newRelease/TopMoviesThisWeek'
 import AllComments from '../screens/allComments/AllComments';
 import Comments from '../screens/allComments/Comments';
 import NotFound from '../screens/notFound/NotFound';
+import DeveloperInfo from '../screens/developerInfo/DeveloperInfo';
 
 export const screens = [
   {
@@ -160,6 +161,14 @@ export const screens = [
     name: 'NotFound',
     component: NotFound,
     title: 'NotFound', 
+    headerAlign: 'start',
+    headers: true,
+  },
+  {
+    id: '122',
+    name: 'Developer Information',
+    component: DeveloperInfo,
+    title: 'Developer Information', 
     headerAlign: 'start',
     headers: true,
   },

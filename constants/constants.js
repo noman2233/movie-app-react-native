@@ -16,6 +16,9 @@ export const download = require('../assets/images/icons/download.png');
 export const play = require('../assets/images/icons/icons8-play-30.png');
 export const heart = require('../assets/images/icons/icons8-heart-30.png');
 export const not_found = require('../assets/images/not_found.png');
+export const google_play = require('../assets/images/icons/icons8-google-play-50.png');
+export const grater_than = require('../assets/images/icons/grater.png');
+export const filter = require('../assets/images/icons/filter.png');
 
 // ************** bottom navigation icon images ************************
 
@@ -45,3 +48,67 @@ export const main_forgot = require('../assets/images/auth/main_forgot.png');
 export const google_logo = require('../assets/images/google_logo.png');
 export const fingerprint = require('../assets/images/auth/images.png');
 export const fingerprint_2 = require('../assets/images/auth/images.png');
+
+export const data_buttons = [
+  {
+    id: '1',
+    title: 'All Categories',
+  },
+  {
+    id: '2',
+    title: 'Movies',
+  },
+  {
+    id: '3',
+    title: 'TV Series',
+  },
+  {
+    id: '34',
+    title: 'Entertainment',
+  },
+  {
+    id: '32',
+    title: 'Horror',
+  },
+  {
+    id: '312',
+    title: 'Funny',
+  },
+];
+export const search_search = [
+  {
+    id: '1',
+    img: 'https://www.movieposters.com/cdn/shop/products/wandavision.mp_240x360_crop_center.progressive.jpg?v=1614371756',
+    title: 'Avangers',
+  },
+  {
+    id: '2',
+    img: 'https://images.squarespace-cdn.com/content/v1/5cf6959864dfad0001763314/1568017206611-7M82X7SXHZPE83E98VKG/Top_15_Movie_Posters_Her.jpg',
+    title: 'Bad Boy',
+  },
+  {
+    id: '3',
+    img: 'https://cdn.theplaylist.net/wp-content/uploads/2021/12/14172154/annette-poster-691x1024.jpg',
+    title: 'Aqua Man',
+  },
+  {
+    id: '34',
+    img: 'https://www.indiewire.com/wp-content/uploads/2019/12/beach_bum.jpg?w=510',
+    title: 'Spirit',
+  },
+  {
+    id: '32',
+    img: 'https://3.bp.blogspot.com/-wYKkAXkvNpU/UBkf8nk8dpI/AAAAAAAAKlE/W4aWyiaNkVg/s1600/The+Shining+by+Vlad+Rodriguez.jpg',
+    title: 'Thanks Giving',
+  },
+  {
+    id: '312',
+    img: 'https://static01.nyt.com/images/2017/09/15/arts/24movie-posters8/24movie-posters8-articleLarge.jpg?quality=75&auto=webp&disable=upscale',
+    title: 'Silent Night',
+  },
+  {
+    id: '312',
+    img: 'https://static-prod.adweek.com/wp-content/uploads/2020/04/social-distance-movies-bad-boy-2020.jpg',
+    title: 'Barbie',
+  },
+];

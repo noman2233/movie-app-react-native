@@ -96,8 +96,6 @@ const styles = StyleSheet.create({
     height: '100%',
     resizeMode: 'cover',
     flexDirection: 'column',
-    // position: 'relative',
-    paddingLeft: SIZES.marginLarge,
   },
   heading: {
     color: COLORS.light,

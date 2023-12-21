@@ -10,7 +10,7 @@ import {
   responsiveHeight,
   responsiveWidth,
 } from 'react-native-responsive-dimensions';
-const RatingModal = ({setRatingModal, setOpen}) => {
+const RatingModal = ({setRatingModal}) => {
   return (
     <Modal
       isVisible={true}
@@ -80,14 +80,14 @@ const RatingModal = ({setRatingModal, setOpen}) => {
             labelStyle={{
               color: COLORS.light,
             }}
-            onPress={() => setOpen(false)}
+            onPress={() => setRatingModal(false)}
           />
           <SimpleButton
             label="Submit"
             containerStyle={{
               width: responsiveWidth(35),
             }}
-            onPress={() => setOpen(false)}
+            onPress={() => setRatingModal(false)}
           />
         </View>
       </View>

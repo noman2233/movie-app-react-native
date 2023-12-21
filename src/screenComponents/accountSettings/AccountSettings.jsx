@@ -11,6 +11,7 @@ import {
   favourite,
   fingerprint,
   fingerprint_2,
+  google_play,
 } from '../../../constants/constants';
 import {responsiveWidth} from 'react-native-responsive-dimensions';
 import Header from './header/Header';
@@ -56,6 +57,11 @@ const AccountSettings = () => {
           onPress={() => navigation.navigate('Booking')}
         />
         <ButtonComponent label="Notification" image={Notification} />
+        <ButtonComponent
+          label="DeveloperInfo"
+          image={google_play}
+          onPress={() => navigation.navigate('Developer Information')}
+        />
         <ButtonComponent
           label="Useful Links"
           image={contact}
