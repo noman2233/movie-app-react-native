@@ -5,4 +5,4 @@ AND A link of youtube for demo of App https://youtu.be/1CbipytKGRI
 Below are some visuals of APP LAYOUT
 
 
-<img src="https://ibb.co/41JMF3P" alt=" ">
+<img src="https://ibb.co/41JMF3P" alt=""  width="100px" height="100px" >
