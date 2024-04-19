@@ -5,4 +5,4 @@ AND A link of youtube for demo of App https://youtu.be/1CbipytKGRI
 Below are some visuals of APP LAYOUT
 
 
-<img src="https://ibb.co/41JMF3P" alt=""  width="100px" height="100px" >
+<img src="https://i.ibb.co/3RkWTQB/Whats-App-Image-2024-01-13-at-10-14-08-AM.jpg" alt="Whats-App-Image-2024-01-13-at-10-14-08-AM" border="0">
